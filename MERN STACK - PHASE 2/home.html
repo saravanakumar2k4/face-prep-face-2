@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">MovieBooking</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="jumbotron text-center bg-light p-5">
+            <h1>Welcome to MovieBooking</h1>
+            <p>Book your favorite movies online with ease!</p>
+            <a href="movies.html" class="btn btn-primary">Browse Movies</a>
+        </div>
+
+        <!-- Movie List -->
+        <h2 class="text-center my-4">Available Movies</h2>
+        <div class="row">
+            <div class="col-md-4 movie-card">
+                <div class="card">
+                    <img src="images/Screenshot 2024-12-21 143827.png" class="card-img-top" alt="Movie 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Da Vici Code</h5>
+                        <p class="card-text">Show Time: 2:00 PM</p>
+                        <p class="card-text">Price: 100</p>
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 movie-card">
+                <div class="card">
+                    <img src="images/Screenshot 2024-12-21 143750.png" class="card-img-top" alt="Movie 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Passengers</h5>
+                        <p class="card-text">Show Time: 4:30 PM</p>
+                        <p class="card-text">Price: 100</p>
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 movie-card">
+                <div class="card">
+                    <img src="images/Screenshot 2024-12-21 143654.png" class="card-img-top" alt="Movie 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Interstellar</h5>
+                        <p class="card-text">Show Time: 7:00 PM</p>
+                        <p class="card-text">Price: 100</p>
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seat Selection -->
+        <h2 class="text-center my-4">Select Your Seats</h2>
+        <div class="seat-selection">
+            <div class="seat">1</div>
+            <div class="seat">2</div>
+            <div class="seat">3</div>
+            <div class="seat">4</div>
+            <div class="seat">5</div>
+            <div class="seat">6</div>
+            <div class="seat">7</div>
+            <div class="seat">8</div>
+        </div>
+        <a href="cart.html"><button class="btn btn-success mt-3">Add to Cart</button></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MovieBooking. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.seat').forEach(seat => {
+            seat.addEventListener('click', () => {
+                seat.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
+</html>

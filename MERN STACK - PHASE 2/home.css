@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+.movie-card {
+    margin-bottom: 20px;
+}
+.seat-selection {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #dcdcdc;
+    border: 1px solid #888;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.seat.selected {
+    background-color: #0af03f;
+    color: rgb(247, 249, 248);
+}
+.card-title{
+    color: white;
+}
