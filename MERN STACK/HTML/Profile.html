@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Profile - Job Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Job Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jobs.html">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">Job Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Profile.html">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Job Seeker Profile Section -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Profile Picture and Resume Upload -->
+            <div class="col-md-4 text-center">
+                <h3>Your Profile</h3>
+                <div class="profile-picture">
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-fluid rounded-circle mb-3" id="profilePicPreview">
+                    <input type="file" class="form-control" id="profilePic" accept="image/*">
+                    <small class="form-text text-muted">Upload your profile picture</small>
+                </div>
+                <div class="resume-upload mt-4">
+                    <input type="file" class="form-control" id="resumeUpload" accept=".pdf,.doc,.docx">
+                    <small class="form-text text-muted">Upload your resume (PDF or DOC format)</small>
+                </div>
+            </div>
+
+            <!-- Personal Details and Sections -->
+            <div class="col-md-8">
+                <h3 class="mb-4">Personal Details</h3>
+                <form id="profileForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <h4 class="mt-4">Skills</h4>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="skills" placeholder="Enter your skills (comma separated)">
+                    </div>
+
+                    <!-- Work Experience Section -->
+                    <h4 class="mt-4">Work Experience</h4>
+                    <div id="workExperience">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Job Title" id="jobTitle1">
+                            <input type="text" class="form-control mt-2" placeholder="Company Name" id="company1">
+                            <textarea class="form-control mt-2" placeholder="Responsibilities" id="responsibilities1"></textarea>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary mt-3" id="addExperienceBtn">Add More Experience</button>
+
+                    <!-- Education Section -->
+                    <h4 class="mt-4">Education</h4>
+                    <div id="educationSection">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Degree" id="degree1">
+                            <input type="text" class="form-control mt-2" placeholder="Institution" id="institution1">
+                            <input type="text" class="form-control mt-2" placeholder="Year of Graduation" id="gradYear1">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary mt-3" id="addEducationBtn">Add More Education</button>
+
+                    <!-- Saved Jobs and Applications -->
+                    <h4 class="mt-4">Saved Jobs</h4>
+                    <ul class="list-group" id="savedJobsList">
+                        <!-- Dynamically added saved jobs will appear here -->
+                    </ul>
+
+                    <h4 class="mt-4">Submitted Applications</h4>
+                    <ul class="list-group" id="applicationsList">
+                        <!-- Dynamically added applications will appear here -->
+                    </ul>
+
+                    <!-- Privacy Settings -->
+                    <h4 class="mt-4">Privacy Settings</h4>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="visibilityToEmployers">
+                        <label class="form-check-label" for="visibilityToEmployers">
+                            Make profile visible to employers
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Save Profile</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Job Portal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and custom JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="job-seeker-profile.js"></script>
+    <script src="/JS/profile.js"></script>
+</body>
+</html>

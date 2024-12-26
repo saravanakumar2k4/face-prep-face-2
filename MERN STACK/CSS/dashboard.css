@@ -1,0 +1,38 @@
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Job Posting List */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.list-group-item .metrics p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.list-group-item button {
+    font-size: 0.9rem;
+}
+
+/* Form Styles */
+form {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form .form-label {
+    font-weight: bold;
+}
+
+/* Notification Settings */
+.form-check-input {
+    margin-top: 7px;
+}

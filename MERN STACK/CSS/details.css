@@ -1,0 +1,62 @@
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Job Details Header */
+.job-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.job-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Job Description Section */
+.job-description h3,
+.job-description h4 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.job-description ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.job-description ul li {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* CTA Buttons */
+.cta-buttons .btn {
+    margin-right: 10px;
+}
+
+/* Company Overview */
+.company-overview img {
+    width: 100%;
+    height: auto;
+}
+
+.company-overview .card-body {
+    text-align: center;
+}
+
+/* Related Jobs Section */
+#related-jobs .card-body {
+    text-align: center;
+}
+
+#related-jobs .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#related-jobs .card-text {
+    font-size: 1rem;
+    color: #555;
+}

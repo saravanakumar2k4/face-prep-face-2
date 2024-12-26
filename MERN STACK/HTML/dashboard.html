@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard - Job Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/dashboard.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Job Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jobs.html">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">Job Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Profile.html">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Section -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Job Postings List -->
+            <div class="col-md-8">
+                <h2 class="mb-4">Your Job Postings</h2>
+
+                <!-- Job Status Tabs -->
+                <ul class="nav nav-pills mb-4" id="jobTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="active-jobs-tab" data-bs-toggle="pill" href="#active-jobs" role="tab" aria-controls="active-jobs" aria-selected="true">Active Jobs</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="expired-jobs-tab" data-bs-toggle="pill" href="#expired-jobs" role="tab" aria-controls="expired-jobs" aria-selected="false">Expired Jobs</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="draft-jobs-tab" data-bs-toggle="pill" href="#draft-jobs" role="tab" aria-controls="draft-jobs" aria-selected="false">Draft Jobs</a>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="jobTabsContent">
+                    <!-- Active Jobs -->
+                    <div class="tab-pane fade show active" id="active-jobs" role="tabpanel" aria-labelledby="active-jobs-tab">
+                        <div class="list-group">
+                            <!-- Active Job Item -->
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5>Web Developer</h5>
+                                    <p><strong>Company:</strong> ABC Corp</p>
+                                    <p><strong>Location:</strong> New York</p>
+                                </div>
+                                <div class="metrics">
+                                    <p><strong>Applications:</strong> 25</p>
+                                    <p><strong>Views:</strong> 100</p>
+                                    <p><strong>Shares:</strong> 5</p>
+                                </div>
+                                <button class="btn btn-outline-danger btn-sm">Deactivate</button>
+                            </div>
+                            <!-- Additional Active Jobs... -->
+                        </div>
+                    </div>
+
+                    <!-- Expired Jobs -->
+                    <div class="tab-pane fade" id="expired-jobs" role="tabpanel" aria-labelledby="expired-jobs-tab">
+                        <div class="list-group">
+                            <!-- Expired Job Item -->
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5>Graphic Designer</h5>
+                                    <p><strong>Company:</strong> Design Studios</p>
+                                    <p><strong>Location:</strong> Remote</p>
+                                </div>
+                                <div class="metrics">
+                                    <p><strong>Applications:</strong> 15</p>
+                                    <p><strong>Views:</strong> 80</p>
+                                    <p><strong>Shares:</strong> 3</p>
+                                </div>
+                                <button class="btn btn-outline-secondary btn-sm">Repost</button>
+                            </div>
+                            <!-- Additional Expired Jobs... -->
+                        </div>
+                    </div>
+
+                    <!-- Draft Jobs -->
+                    <div class="tab-pane fade" id="draft-jobs" role="tabpanel" aria-labelledby="draft-jobs-tab">
+                        <div class="list-group">
+                            <!-- Draft Job Item -->
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5>Project Manager</h5>
+                                    <p><strong>Company:</strong> XYZ Inc</p>
+                                    <p><strong>Location:</strong> San Francisco</p>
+                                </div>
+                                <button class="btn btn-outline-warning btn-sm">Edit</button>
+                            </div>
+                            <!-- Additional Draft Jobs... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create/Edit Job Posting -->
+            <div class="col-md-4">
+                <h3 class="mb-4">Create/Edit Job Posting</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="jobTitle" class="form-label">Job Title</label>
+                        <input type="text" class="form-control" id="jobTitle" placeholder="Enter job title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="jobDescription" class="form-label">Job Description</label>
+                        <textarea class="form-control" id="jobDescription" rows="4" placeholder="Describe the job"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="salary" class="form-label">Salary Range</label>
+                        <input type="text" class="form-control" id="salary" placeholder="Enter salary range">
+                    </div>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="Enter job location">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Job</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Notification Settings -->
+        <section class="mt-5">
+            <h3>Notification Settings</h3>
+            <form>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="appNotifications">
+                    <label class="form-check-label" for="appNotifications">
+                        Notify me when I receive applications.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="updateNotifications">
+                    <label class="form-check-label" for="updateNotifications">
+                        Notify me when my job posting is updated.
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Save Notifications</button>
+            </form>
+        </section>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Job Portal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="/JS/dashboard.js"></script>
+</body>
+</html>

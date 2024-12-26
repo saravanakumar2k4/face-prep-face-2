@@ -1,0 +1,44 @@
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Filter Sidebar */
+.card {
+    margin-bottom: 20px;
+}
+
+/* Job Listings */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card-body {
+    text-align: left;
+}
+
+.pagination {
+    margin-top: 30px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Range Input Styling */
+input[type="range"] {
+    width: 100%;
+}
